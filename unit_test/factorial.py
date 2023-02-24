@@ -4,5 +4,11 @@ def factorial(n):
     else:
         return n * factorial(n-1)
     
+def factor_2(n):
+    factor = 1
+    for i in range(1,n+1):
+        factor = factor*i
+    return factor
+
 if __name__ == '__main__':
-    print(factorial(10))
+    print(factor_2(56))
