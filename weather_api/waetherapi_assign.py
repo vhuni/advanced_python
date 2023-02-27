@@ -30,9 +30,9 @@ class Weatherapp:
     def get_weather_description(self):
         self.weather_desc = Weatherapp.description
         print(type(self.weather_desc))
-        print('Description: ', self.weather_desc['weather'][0]['description'])
-        print('Humidity: ', self.weather_desc['main']['humidity'])
-        print('Temperature: ', self.weather_desc['main']['temp'])
+        print(f'{Weatherapp.city.title()}\'s Weather: ', self.weather_desc['weather'][0]['description'])
+        print(f'{Weatherapp.city.title()}\'s Humidity: ', self.weather_desc['main']['humidity'])
+        print(f'{Weatherapp.city.title()}\'s Temperature: ', self.weather_desc['main']['temp'], 'Fahrenheit')
 
 if __name__ == '__main__':
     Weatherapp()
