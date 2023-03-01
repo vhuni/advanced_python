@@ -18,7 +18,7 @@ class Weatherapp:
 
     def get_weather(self):
         self.city = Weatherapp.city
-        self.api_key = 'eaeab850760a6f2d218ddb5decd21c40'
+        ## self.api_key = 'secret_api key'
         self.url = 'https://api.openweathermap.org/data/2.5/weather?q=' + f'{self.city}' + '&appid='+ f'{self.api_key}'
         self.response = requests.get(self.url)
         self.weather = self.response.json()
