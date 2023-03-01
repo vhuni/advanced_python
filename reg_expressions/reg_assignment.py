@@ -45,7 +45,8 @@ def check_string_format(string):
 def check_string2_format(string):
     #string that contains only letters, numbers, and spaces, and is between 5 and 50 characters long.
     list = ''
-    match_string2 = re.findall(r'(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([\s]).{5,50}', string)
+    # match_string2 = re.findall(r'(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([\s]).{5,50}', string)
+    match_string2 = re.findall(r'^[a-zA-Z0-9 ]{5,50}', string)
     for match in match_string2:
         list = list + ' ' + match
     return list
